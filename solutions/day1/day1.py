@@ -15,9 +15,8 @@ def my_add(a:int, b:int) -> int:
     Returns:
         int: _description_
     """
-    result = a + b
-    # print(f"{a} + {b} = {result}")
-    return  result
+    return   a + b
+    
 
 def get_digit(extracted:str) -> str: 
     return Day1Params.number_words[extracted] if extracted in Day1Params.number_words.keys() else extracted 
