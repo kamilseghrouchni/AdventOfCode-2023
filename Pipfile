@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jupyterlab = "*"
+pandas = "*"
+numexpr = "*"
+typer = "*"
+typing = "*"
+pytesseract = "*"
+
+[dev-packages]
+black = "*"
+isort = "*"
+pre-commit = "*"
+pydocstyle = "*"
+pylint = "*"
+mypy = "*"
+pytest = "*"
+
+[requires]
+python_version = "3.11"
