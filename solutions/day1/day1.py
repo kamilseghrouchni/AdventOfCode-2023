@@ -1,9 +1,12 @@
-from params import ReadParams, Day1Params
-import typer
-from pathlib import Path 
 import re
-from typing import List
 from functools import reduce
+from pathlib import Path
+from typing import List
+
+import typer
+
+from params import Day1, ReadParams
+
 
 def my_add(a:int, b:int) -> int:
     """reduce function for summing all digits
@@ -19,7 +22,7 @@ def my_add(a:int, b:int) -> int:
     
 
 def get_digit(extracted:str) -> str: 
-    return Day1Params.number_words[extracted] if extracted in Day1Params.number_words.keys() else extracted 
+    return Day1.NUMBERS_MAP[extracted] if extracted in Day1.NUMBERS_MAP.keys() else extracted 
 
 def find_digit_pair(line:str) -> List[int]:
     """Find digit pairs for part 1
@@ -31,7 +34,7 @@ def find_digit_pair(line:str) -> List[int]:
         List[int]: list of pairs digits
     """
     # join dictionnary of digits in letters
-    digit_letters= '|'.join(map(re.escape, Day1Params.number_words.keys()))
+    digit_letters= '|'.join(map(re.escape, Day1.NUMBERS_MAP.keys()))
 
     # create regex for first and last digits
     reg_first_digit = digit_letters +'|\d'
@@ -51,8 +54,8 @@ def find_digit_pair(line:str) -> List[int]:
 
 def main():
 
-    data_path = Path(ReadParams.path)
-    puzzle_data = data_path/"day1"/"puzzle.txt"
+    data_path = Path(ReadParams.PATH)
+    puzzle_data = data_path/"day1"/ReadParams.PUZZLE
 
     with open(puzzle_data,"r") as calib: 
 

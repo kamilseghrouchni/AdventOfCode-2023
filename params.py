@@ -1,9 +1,13 @@
 class ReadParams:
-    path = "data/"
+    PATH = "data/"
+    PUZZLE = "puzzle.txt"
+    EXAMPLE = "example"
+    TXT = ".txt"
+    
     
 
-class Day1Params: 
-    number_words = {
+class Day1: 
+    NUMBERS_MAP = {
         "one": "1",
         "two": "2",
         "three": "3",
@@ -14,3 +18,11 @@ class Day1Params:
         "eight": "8",
         "nine": "9"
     }
+
+class Day2: 
+    GAME_CONSTRAINTS = {
+        "red":12,
+        "green":13,
+        "blue": 14
+    }
+    COLORS = ["red","green","blue"]
