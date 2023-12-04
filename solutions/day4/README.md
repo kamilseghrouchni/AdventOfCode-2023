@@ -40,6 +40,9 @@ Your puzzle answer was 26218.
 The first half of this puzzle is complete! It provides one gold star: *
 
 --- Part Two ---
+
+TODO : Make this part recursive! 
+
 Just as you're about to report your findings to the Elf, one of you realizes that the rules have actually been printed on the back of every card this whole time.
 
 There's no such thing as "points". Instead, scratchcards only cause you to win more scratchcards equal to the number of winning numbers you have.
