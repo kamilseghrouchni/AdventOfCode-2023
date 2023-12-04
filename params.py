@@ -26,3 +26,7 @@ class Day2:
         "blue": 14
     }
     COLORS = ["red","green","blue"]
+
+class Day3: 
+    REG_PART_1 = r"[^\w\s.]"
+    REG_PART_2= r"\*"
